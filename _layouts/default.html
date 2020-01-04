@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+    <head>
+        <title>{% if page.title %} {{site.title}} - {{page.title}} {% else %} {{site.title}} {% endif %}</title>
+        <link rel="stylesheet" href="{{site.baseurl}}/assets/css/style.css">
+    </head>
+
+    <body>
+        <main>
+            {% include header.html%}
+            {{content}}
+            <!-- {% include footer.html %} -->
+        </main>
+    </body>
+
+</html>

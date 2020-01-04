@@ -1,0 +1,106 @@
+/* ==============================================
+
+Color
+
+============================================== */
+
+.bg-color1 {
+    background-color: #ffffff;
+}
+  
+.bg-color2 {
+    background-color: #216ae6;
+}
+  
+.bg-color3 {
+    background-color: #4986ee;
+}
+  
+.bg-color4 {
+    background-color: #fafcff;
+}
+
+/* ==============================================
+
+Header Area
+
+============================================== */
+
+.header-area {
+    margin-bottom: 430px;
+}
+
+.header-area:before {
+    content: "";
+    height: 700px;
+    border-bottom-left-radius: 270px;
+    border-bottom-right-radius: 270px;
+    background: #216ae6;
+    display: block;
+    position: absolute;
+    transform: rotate(6deg);
+    left: -50px;
+    right: -70px;
+    bottom: -292px;
+    z-index: 1;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .header-area:before {
+        bottom: -240px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .header-area:before {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-area:before {
+        display: none;
+    }
+}
+
+.header-area .header-banner {
+    padding: 180px 50px 0px 0px;
+    z-index: 3;
+    position: relative;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .header-area .header-banner {
+        padding: 100px 0px 0px 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .header-area .header-banner {
+        padding: 40px 0px 100px 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-area .header-banner {
+        padding: 60px 0px 80px 0px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .header-area {
+        margin-bottom: 277px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .header-area {
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-area {
+        margin: 0;
+    }
+}
