@@ -13,18 +13,9 @@ Color
 
 ============================================== */
 
-.bg-color1{
-    background-color: $bg-color1; 
- }
- .bg-color2{
-    background-color: $bg-color2; 
- }
- .bg-color3{
-    background-color: $bg-color3; 
- }
- .bg-color4{
-    background-color: $bg-color4; 
- }
+.bg-color2 {
+    background-color: $bg-color2;
+}
 
 /* ==============================================
 
@@ -32,55 +23,73 @@ Header Area
 
 ============================================== */
 
-.main-area{
-    overflow:hidden;
- }
- .header-area{
-     margin-bottom: 430px;
-     &:before{
-     content: "";
-     height: 700px;
-     border-bottom-left-radius: 270px;
-     border-bottom-right-radius: 270px;
-     background: $bg-color2;
-     display: block;
-     position: absolute;
-     transform: rotate(6deg);
-     left: -50px;
-     right: -70px;
-     bottom: -292px;
-     z-index:1;
-     @include desktop{
-         bottom: -240px;
-     }
-     @include laptop{
-        display:none;
-     }
-     @include tablet{
-       display:none;
-     }
-   }
-   .header-banner{
-      padding:180px 50px 0px 0px;
-      z-index: 3;
-      position: relative;
-      @include desktop{
-         padding:100px 0px 0px 0px;
-      } 
-      @include laptop{
-         padding:40px 0px 100px 0px;
-      }
-      @include tablet{
-         padding:60px 0px 80px 0px;
-      }
-   }
-   @include desktop{
-       margin-bottom:277px;
-   }
-    @include laptop{
-        margin:0;
+.header-area {
+    margin-bottom: 430px;
+
+    &:before {
+        content: "";
+        height: 700px;
+        border-bottom-left-radius: 270px;
+        border-bottom-right-radius: 270px;
+        background: $bg-color2;
+        display: block;
+        position: absolute;
+        transform: rotate(6deg);
+        left: -50px;
+        right: -70px;
+        bottom: -292px;
+        z-index: -1;
+
+        @include desktop {
+            bottom: -240px;
+        }
+
+        @include laptop {
+            display: none;
+        }
+
+        @include tablet {
+            display: none;
+        }
     }
-    @include tablet{
-        margin:0;
+    
+    .header-banner {
+        padding: 180px 50px 0px 0px;
+        z-index: 3;
+        position: relative;
+
+        @include desktop {
+            padding: 100px 0px 0px 0px;
+        }
+
+        @include laptop {
+            padding: 40px 0px 100px 0px;
+        }
+
+        @include tablet {
+            padding: 60px 0px 80px 0px;
+        }
     }
- }
+
+    @include desktop {
+        margin-bottom: 277px;
+    }
+
+    @include laptop {
+        margin: 0;
+    }
+
+    @include tablet {
+        margin: 0;
+    }
+}
+
+.header-nav {
+
+    padding-top: $inner-70;
+
+    @include mobile {
+        padding-top: 0;
+    }
+
+}
