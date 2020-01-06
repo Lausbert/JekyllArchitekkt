@@ -1,26 +1,22 @@
 <header class="header-area bg-color2">
     <div class="container">
-        <div class="header-nav">
-            {% include navigation.html %}
-        </div>
-    <!--
-         {% if page.url == "/" %}
+        {% include navigation.html %}
+        {% if page.url == "/" %}
         <div class="header-banner">
             <div class="row">
                 <div class="col-md-8">
                 <div class="banner-content">
-                    <h1 class="big-font1 white-text m-b-50">Awesome App for Your Modern Lifestyle</h1>
+                    <h1 class="big-font1 white-text m-b-50">Dependency Graph Visualizer for Your iOS and macOS App</h1>
                     <h5 class="white-text m-b-50">Increase productivity with a simple to-do app. app for
                         managing your personal budgets.
                     </h5>
                     <ul class="banner-ads-btn m-0 list-inline">
-                        <li class="list-inline-item"><a href="#" class="ads-btn1 btn btn-primary"><img src="{{site.baseurl}}/assets/images/google-play.png" alt="ads image" /><span>Google Play</span></a></li>
-                        <li class="list-inline-item"><a href="#" class="ads-btn2 btn btn-primary"><img src="{{site.baseurl}}/assets/images/appstore.png" alt="ads image" /><span>Appstore</span></a></li>
+                        <li class="list-inline-item"><a href="#" class="ads-btn1 btn btn-secondary"><img src="{{site.baseurl}}/assets/images/google-play.png" alt="ads image" /><span>Google Play</span></a></li>
                     </ul>
                 </div>
                 </div>
                 <div class="col-md-4">
-                <div class="banner-mockup"><img src="{{site.baseurl}}/assets/images/banner-mockup.png" alt="banner image" /></div>
+                <div class="banner-mockup"><img src="{{site.baseurl}}/assets/images/banner.png" alt="banner image showing a mac with the architekkt application" /></div>
                 </div>
             </div>
         </div>
@@ -36,7 +32,6 @@
         </div>
         {% endif %}
         {% include header_shape.html %}
-    -->
     </div>
 </header>
     

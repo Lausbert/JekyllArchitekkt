@@ -52,7 +52,7 @@ Header Area
             display: none;
         }
     }
-    
+
     .header-banner {
         padding: 180px 50px 0px 0px;
         z-index: 3;
@@ -84,7 +84,7 @@ Header Area
     }
 }
 
-.header-nav {
+.header-area .container {
 
     padding-top: $inner-70;
 
@@ -92,4 +92,121 @@ Header Area
         padding-top: 0;
     }
 
+}
+
+@-webkit-keyframes banner-mockup {
+    0% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+
+    50% {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+    }
+
+    100% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+}
+
+@keyframes banner-mockup {
+    0% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+
+    50% {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+    }
+
+    100% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+}
+
+@-webkit-keyframes banner-mockup-sink {
+    100% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+}
+
+@keyframes banner-mockup-sink {
+    100% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+}
+
+.header-banner {
+    .banner-content {
+        padding-right: $inner-30;
+        position: relative;
+        z-index: 2;
+
+        @include laptop {
+            padding-right: 0;
+        }
+
+        @include tablet {
+            padding-right: 0;
+        }
+    }
+
+    .banner-mockup {
+        z-index: 2;
+        position: absolute;
+        animation-name: banner-mockup-sink, banner-mockup;
+        animation-duration: .3s, 1.5s;
+        animation-delay: 0s, .3s;
+        animation-timing-function: ease-out, ease-in-out;
+        animation-iteration-count: 1, infinite;
+        animation-fill-mode: forwards;
+        animation-direction: normal, alternate;
+
+        @include tablet {
+            display: none;
+
+        }
+
+        @include desktop {
+            margin: 0;
+
+            img {
+                max-width: 200%;
+            }
+        }
+
+        @include laptop {
+            margin: 0;
+
+            img {
+                max-width: 250%;
+            }
+        }
+    }
+
+    .banner-ads-btn {
+        li {
+            margin-right: 20px;
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin: 0;
+            }
+
+            @include mobile {
+                display: block;
+                margin-right: 0;
+
+                a {
+                    display: block;
+                }
+            }
+        }
+    }
 }
