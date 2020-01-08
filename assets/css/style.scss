@@ -256,3 +256,19 @@ Header Area
         display: none;
     }
 }
+
+.header-page-title {
+    position: relative;
+    z-index: 3;
+    padding-top: 160px;
+
+    @include tablet {
+        padding-top: 60px;
+        padding-bottom: 90px;
+    }
+
+    @include laptop {
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+}
