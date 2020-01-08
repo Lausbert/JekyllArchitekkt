@@ -10,16 +10,6 @@
 
 /* ==============================================
 
-Color
-
-============================================== */
-
-.bg-color2 {
-    background-color: $bg-color2;
-}
-
-/* ==============================================
-
 Header Area
 
 ============================================== */
@@ -32,7 +22,7 @@ Header Area
         height: 700px;
         border-bottom-left-radius: 270px;
         border-bottom-right-radius: 270px;
-        background: $bg-color2;
+        background: $dark;
         display: block;
         position: absolute;
         transform: rotate(6deg);
