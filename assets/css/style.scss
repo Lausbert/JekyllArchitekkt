@@ -29,7 +29,7 @@ Header Area
         left: -50px;
         right: -70px;
         bottom: -292px;
-        z-index: -1;
+        z-index: 2;
 
         @include desktop {
             bottom: -240px;
@@ -42,6 +42,10 @@ Header Area
         @include tablet {
             display: none;
         }
+    }
+
+    .navbar {
+        z-index: 3;
     }
 
     .header-banner {
@@ -137,7 +141,6 @@ Header Area
     .banner-content {
         padding-right: $inner-30;
         position: relative;
-        z-index: 2;
 
         @include laptop {
             padding-right: 0;
@@ -149,7 +152,6 @@ Header Area
     }
 
     .banner-mockup {
-        z-index: 2;
         position: absolute;
         animation-name: banner-mockup-sink, banner-mockup;
         animation-duration: .3s, 1.5s;
@@ -199,5 +201,58 @@ Header Area
                 }
             }
         }
+    }
+}
+
+.header-shape {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+
+    .left {
+        position: absolute;
+        left: -190px;
+        top: -690px;
+
+        @include desktop {
+            left: -140px;
+            top: -220px;
+            width: 470px;
+
+        }
+
+        @include laptop {
+            left: -80px;
+            top: -220px;
+            width: 400px;
+        }
+    }
+
+    .right {
+        position: absolute;
+        right: -640px;
+        top: -610px;
+
+        @include desktop {
+            right: -295px;
+            top: -90px;
+            width: 600px;
+        }
+
+        @include laptop {
+            right: -250px;
+            top: -90px;
+            width: 480px;
+        }
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    @include tablet {
+        display: none;
     }
 }
