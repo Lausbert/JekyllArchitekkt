@@ -13,14 +13,32 @@ Colors
 
 ============================================== */
 
-.button-color1 {
-    background-color: $button-color1;
-    border-color: $button-color1;
-}
-
 .background-color2 {
     background-color: $background-color2;
 }
+
+/* ==============================================
+
+Form & Button
+
+============================================== */
+
+.ads-btn1{
+    @include form-size(
+        $form-size2,$form-space-v + 6, $form-space-v + 10,$form-radius
+    ) 
+    @include form-variant(
+        $form-color2,$form-bg,$form-border3, $form-change-color,$form-bg2,$form-change-border2
+    )
+    span{
+       margin-left:10px;
+    }
+    img{
+        height:20px;
+        width:20px;
+        object-fit:contain;
+    }
+  }
 
 /* ==============================================
 
