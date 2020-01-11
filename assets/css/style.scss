@@ -360,7 +360,7 @@ Footer Area
 .footer-widget {
     margin-bottom: $inner-30;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 
     .widget-title {
         margin-bottom: 10px;
@@ -417,7 +417,7 @@ Footer Area
         left: -40px;
 
         img {
-            z-index: 3;
+            z-index: 2;
             position: relative;
         }
     }
@@ -428,7 +428,7 @@ Footer Area
         bottom: -40px;
 
         img {
-            z-index: 3;
+            z-index: 2;
             position: relative;
         }
     }
