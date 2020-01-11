@@ -23,22 +23,27 @@ Form & Button
 
 ============================================== */
 
-.ads-btn1{
-    @include form-size(
-        $form-size2,$form-space-v + 6, $form-space-v + 10,$form-radius
-    ) 
-    @include form-variant(
-        $form-color2,$form-bg,$form-border3, $form-change-color,$form-bg2,$form-change-border2
-    )
-    span{
-       margin-left:10px;
+.ads-btn1 {
+    @include form-size($form-size2, $form-space-v + 6, $form-space-v + 10, $form-radius) @include form-variant($form-color2, $form-bg, $form-border3, $form-change-color, $form-bg2, $form-change-border2) span {
+        margin-left: 10px;
     }
-    img{
-        height:20px;
-        width:20px;
-        object-fit:contain;
+
+    img {
+        height: 20px;
+        width: 20px;
+        object-fit: contain;
     }
-  }
+}
+
+/* ==============================================
+
+Header Area
+
+============================================== */
+
+.main-area {
+    overflow: hidden;
+}
 
 /* ==============================================
 
@@ -311,116 +316,124 @@ Footer Area
 
 ============================================== */
 
-.footer-area{
-    margin-top:265px;
-	&:before{
-    content: "";
-    height: 700px;
-    border-top-left-radius: 270px;
-    border-top-right-radius: 270px;
-    background: $background-color2;
-    display: block;
-    position: absolute;
-    transform: rotate(6deg);
-	left: -50px;
-    right: -70px;
-    top:-188px;
-    z-index:1;
-	@include laptop{
-	   display:none;
-	}
-	@include tablet{
-	  display:none;
-	}
-  }
-  @include desktop{
-    margin-top:222px;
-  }  
-  @include tablet{
-     margin-top:0;
-	 padding-top:$inner-90;
-  } 
-  @include laptop{
-     margin-top:0;
-	 padding-top:$section-130;
-  }
-}
-.footer-widget{
-    margin-bottom:$inner-30;
-	position:relative;
-	z-index:2;
-    .widget-title{
-		margin-bottom:10px;
-		h5{
-			margin:0;
-			color:rgba($font-color4, 0.9);
-		}
-	}
-	p{
-		color:rgba($font-color4, 0.9);
-	}
-	.widget-list{
-		margin:0;
-		li{
-			margin-bottom:5px;
-		}
-		li a{
-			color:rgba($font-color4, 0.9);
-			
-			&:hover{
-			    text-decoration:underline;
-			} 
-		}
-	}
-	form{
-		@include placeholder {
-		color: $font-color4;
-	}
-		input{
-			 @include form-size(
-				  $form-size,$form-space-v,$form-space-h - 15,$form-radius
-			  ) 
-			@include form-variant(
-				  $form-color,$form-bg2,$form-border2, $form-color,$form-bg2,$form-border2
-			  )
-		}
-		button{
-			
-			   @include form-size(
-				  $form-size,$form-space-v,$form-space-h,$form-radius
-              ) 
-               
-            @include form-variant(
-                $form-color2,$form-bg,$form-border3, $form-change-color,$form-bg2,$form-change-border2
-            )
-		}
-	}
+.footer-area {
+    margin-top: 265px;
+
+    &:before {
+        content: "";
+        height: 700px;
+        border-top-left-radius: 270px;
+        border-top-right-radius: 270px;
+        background: $background-color2;
+        display: block;
+        position: absolute;
+        transform: rotate(6deg);
+        left: -50px;
+        right: -70px;
+        top: -188px;
+        z-index: 1;
+
+        @include laptop {
+            display: none;
+        }
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    @include desktop {
+        margin-top: 222px;
+    }
+
+    @include tablet {
+        margin-top: 0;
+        padding-top: $inner-90;
+    }
+
+    @include laptop {
+        margin-top: 0;
+        padding-top: $section-130;
+    }
 }
 
-.footer-shape{
-    position:absolute;
-	width:100%;
-	.left{
-		position:absolute;
-		bottom:-40px;
-		left:-40px;
-		
-		img{
-		    z-index:3;
-			position:relative;
-		}
-	}
-	.right{
-		position:absolute;
-		right:-40px;
-		bottom:-40px;
-		
-		img{
-		    z-index:3;
-			position:relative;
-		}
-	}
-	@include tablet{
-	   display:none;
-	}
+.footer-widget {
+    margin-bottom: $inner-30;
+    position: relative;
+    z-index: 2;
+
+    .widget-title {
+        margin-bottom: 10px;
+
+        h5 {
+            margin: 0;
+            color: rgba($font-color4, 0.9);
+        }
+    }
+
+    p {
+        color: rgba($font-color4, 0.9);
+    }
+
+    .widget-list {
+        margin: 0;
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        li a {
+            color: rgba($font-color4, 0.9);
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    form {
+        @include placeholder {
+            color: $font-color4;
+        }
+
+        input {
+            @include form-size($form-size, $form-space-v, $form-space-h - 15, $form-radius) @include form-variant($form-color, $form-bg2, $form-border2, $form-color, $form-bg2, $form-border2)
+        }
+
+        button {
+
+            @include form-size($form-size, $form-space-v, $form-space-h, $form-radius) @include form-variant($form-color2, $form-bg, $form-border3, $form-change-color, $form-bg2, $form-change-border2)
+        }
+    }
+}
+
+.footer-shape {
+    position: absolute;
+    width: 100%;
+
+    .left {
+        position: absolute;
+        bottom: -40px;
+        left: -40px;
+
+        img {
+            z-index: 3;
+            position: relative;
+        }
+    }
+
+    .right {
+        position: absolute;
+        right: -40px;
+        bottom: -40px;
+
+        img {
+            z-index: 3;
+            position: relative;
+        }
+    }
+
+    @include tablet {
+        display: none;
+    }
 }
