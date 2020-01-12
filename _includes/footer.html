@@ -25,6 +25,11 @@
                                     {% else %}
                                     <a class="nav-item nav-link" href="{{site.url}}/imprint.html">Imprint</a>
                                     {% endif %}
+                                    {% if page.url == "/privacy.html" %}
+                                    <a class="nav-item nav-link active" href="{{site.url}}/privacy.html">Privacy Policy</a>
+                                    {% else %}
+                                    <a class="nav-item nav-link" href="{{site.url}}/privacy.html">Privacy Policy</a>
+                                    {% endif %}
                                 </div>
                             </nav>
                         </ul>
