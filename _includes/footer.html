@@ -8,18 +8,25 @@
                             <h5 class="heading-5">Architekkt</h5>
                         </div>
                         <ul class="widget-list list-inline">
-                            <li><a href="{{site.url}}">Home
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{site.url}}/blog.html">
-                                    Blog
-                                </a>
-                            </li>
-                            <li><a href="#">
-                                    Imprint
-                                </a>
-                            </li>
+                            <nav class="nav flex-column navbar-dark">
+                                <div class="navbar-nav mr-auto">
+                                    {% if page.url == "/" %}
+                                    <a class="nav-item nav-link active" href="{{site.url}}">Home</a>
+                                    {% else %}
+                                    <a class="nav-item nav-link" href="{{site.url}}">Home</a>
+                                    {% endif %}
+                                    {% if page.url == "/blog.html" %}
+                                    <a class="nav-item nav-link active" href="{{site.url}}/blog.html">Blog</a>
+                                    {% else %}
+                                    <a class="nav-item nav-link" href="{{site.url}}/blog.html">Blog</a>
+                                    {% endif %}
+                                    {% if page.url == "/imprint.html" %}
+                                    <a class="nav-item nav-link active" href="{{site.url}}/imprint.html">Imprint</a>
+                                    {% else %}
+                                    <a class="nav-item nav-link" href="{{site.url}}/imprint.html">Imprint</a>
+                                    {% endif %}
+                                </div>
+                            </nav>
                         </ul>
                     </div>
                 </div>
