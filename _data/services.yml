@@ -1,0 +1,18 @@
+- title: One Step Solution
+  description: Choose your project and you're ready to go. No mental overhead.
+  image: assets/images/service-icon2.png
+- title: Clean Interface
+  description: Experience an understandable and intuitive interface.
+  image: assets/images/service-icon5.png
+- title: Complete AST
+  description: Browse the fully resolved AST. Everthing is covered.
+  image: assets/images/service-icon.png
+- title: Force-directed Graph
+  description: Let physics do the work and gain an eye for the essentials .
+  image: assets/images/service-icon5.png
+- title: No Tracking
+  description: Architekkt does not track you. Just write us if something bothers you.
+  image: assets/images/service-icon4.png
+- title: Full Pipeline
+  description: There is more to come to build the best software architecture tool.
+  image: assets/images/service-icon3.png
