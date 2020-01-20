@@ -1,7 +1,4 @@
----
----
-
-@import "variables";
+--- --- @import "variables";
 @import "fonts";
 @import "functions";
 @import "reset";
@@ -107,7 +104,8 @@ input[type='password'],
 textarea[class],
 select {
     transition: $transition-base;
-    @include form-size(inherit, ($form-space-v + 5), ($form-space-h - 10), $form-radius) @include form-variant(inherit, transparent, $form-border, inherit, $form-change-bg, $form-change-border2)
+    @include form-size(inherit, ($form-space-v + 5), ($form-space-h - 10), $form-radius);
+    @include form-variant(inherit, transparent, $form-border, inherit, $form-change-bg, $form-change-border2)
 }
 
 
@@ -117,11 +115,15 @@ input[type='reset'],
 input[type='file'],
 input[type='submit'] {
     transition: $transition-base;
-    @include form-size($form-size, $form-space-v, $form-space-h, $form-radius) @include form-variant($form-color, $form-bg2, $form-border2, $form-change-color2, $form-change-bg3, $form-change-border2)
+    @include form-size($form-size, $form-space-v, $form-space-h, $form-radius);
+    @include form-variant($form-color, $form-bg2, $form-border2, $form-change-color2, $form-change-bg3, $form-change-border2)
 }
 
 .ads-btn1 {
-    @include form-size($form-size2, $form-space-v + 6, $form-space-v + 10, $form-radius) @include form-variant($form-color2, $form-bg, $form-border3, $form-change-color, $form-bg2, $form-change-border2) span {
+    @include form-size($form-size2, $form-space-v + 6, $form-space-v + 10, $form-radius);
+    @include form-variant($form-color2, $form-bg, $form-border3, $form-change-color, $form-bg2, $form-change-border2);
+    
+    span {
         margin-left: 10px;
     }
 
