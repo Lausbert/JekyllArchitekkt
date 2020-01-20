@@ -9,7 +9,7 @@
 
 /* ==============================================
 
-Colors
+Color
 
 ============================================== */
 
@@ -19,6 +19,33 @@ Colors
 
 .background-color2 {
     background-color: $background-color2;
+}
+
+.background-overlay:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $background-overlay;
+    opacity: 0.95;
+    z-index: 1;
+}
+
+div[class*="-wrapper"] {
+    position: relative;
+    z-index: 3;
+}
+
+/* ==============================================
+
+Background Image
+
+============================================== */
+
+.background-image1 {
+    background: $background-color1 url("../images/watch-video-bg.jpg") no-repeat fixed center/cover;
 }
 
 /* ==============================================
@@ -68,23 +95,19 @@ Form & Button
 
 form,
 fieldset {
-   padding:0;
-   margin:0;
+    padding: 0;
+    margin: 0;
 }
 
 input[type='text'],
 input[type='tel'],
 input[type='email'],
-input[type='search'], 
-input[type='password'], 
-textarea[class],select {
-   transition:$transition-base;
-   @include form-size(
-      inherit,($form-space-v + 5),($form-space-h - 10),$form-radius
-  ) 
-  @include form-variant(
-      inherit,transparent,$form-border, inherit,$form-change-bg,$form-change-border2
-  )
+input[type='search'],
+input[type='password'],
+textarea[class],
+select {
+    transition: $transition-base;
+    @include form-size(inherit, ($form-space-v + 5), ($form-space-h - 10), $form-radius) @include form-variant(inherit, transparent, $form-border, inherit, $form-change-bg, $form-change-border2)
 }
 
 
@@ -93,14 +116,8 @@ input[type='button'],
 input[type='reset'],
 input[type='file'],
 input[type='submit'] {
-  transition:$transition-base;
-  @include form-size(
-      $form-size,$form-space-v,$form-space-h,$form-radius
-  ) 
-  @include form-variant(
-      $form-color,$form-bg2,$form-border2, $form-change-color2,$form-change-bg3,$form-change-border2
-  )
-  
+    transition: $transition-base;
+    @include form-size($form-size, $form-space-v, $form-space-h, $form-radius) @include form-variant($form-color, $form-bg2, $form-border2, $form-change-color2, $form-change-bg3, $form-change-border2)
 }
 
 .ads-btn1 {
@@ -523,56 +540,199 @@ Footer Area
 Service Area
 
 ============================================== */
-.line-color1{
-	background-color:#fec2c2;;
+.line-color1 {
+    background-color: #fec2c2;
+    ;
 }
-.line-color2{
-	background-color:#b0ffca;
-}.line-color3{
-	background-color:#d8c8fc;
+
+.line-color2 {
+    background-color: #b0ffca;
 }
-.service-box{
-	text-align:center;
-	margin-bottom:$inner-30;
-	.service-logo{
-		padding:21px 5px;
-		width:85px;
-		height:85px;
-		border-radius:$round-radius;
-		box-shadow:$box-shadow-deep;
-		display:block;
-        text-align:center;
-        vertical-align:middle;
-        margin:auto auto $inner-30;	
-		transition:$transition-base;
-		img {
-			max-height: 40px;
-		}
-		
-	}
-	.service-content{
-		
-		h5,h4,h3{margin-bottom:20px;}
-		p{ margin-bottom:$inner-30; }
-	}
-	.service-line{
-		position: relative;
-		width:2px;
-		height:70px;
-		display:block;
-		top:0;
-		margin:auto auto 0;	
-		transition:$transition-base;
-	}
-	&:hover{
-		.service-logo{
-			box-shadow:$box-shadow;
-			
-		}
-		.service-line{
-			top: -15px;
-		}
-	}
+
+.line-color3 {
+    background-color: #d8c8fc;
+}
+
+.service-box {
+    text-align: center;
+    margin-bottom: $inner-30;
+
+    .service-logo {
+        padding: 21px 5px;
+        width: 85px;
+        height: 85px;
+        border-radius: $round-radius;
+        box-shadow: $box-shadow-deep;
+        display: block;
+        text-align: center;
+        vertical-align: middle;
+        margin: auto auto $inner-30;
+        transition: $transition-base;
+
+        img {
+            max-height: 40px;
+        }
+
+    }
+
+    .service-content {
+
+        h5,
+        h4,
+        h3 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: $inner-30;
+        }
+    }
+
+    .service-line {
+        position: relative;
+        width: 2px;
+        height: 70px;
+        display: block;
+        top: 0;
+        margin: auto auto 0;
+        transition: $transition-base;
+    }
+
+    &:hover {
+        .service-logo {
+            box-shadow: $box-shadow;
+
+        }
+
+        .service-line {
+            top: -15px;
+        }
+    }
+}
+
+/* ==============================================
+
+Watch Video Area
+
+============================================== */
+
+.watch-video-play {
+    position: relative;
+    margin-top: 240px;
+
+    video {
+        max-width: 100%;
+        border-radius: $border-radius;
+    }
+
+    @include laptop {
+        margin-top: 0;
+        margin-bottom: 30px;
+        padding-right: 15px;
+    }
+
+    @include tablet {
+        margin-top: 0;
+        margin-bottom: 30px;
+        padding-right: 15px;
+    }
+
+    .play-btn {
+        padding: 29px 10px;
+        display: block;
+        text-align: center;
+        width: 90px;
+        height: 90px;
+        border-radius: $round-radius;
+        background: $background-color1;
+        cursor: pointer;
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0.8);
+        animation: play-btn 1.5s infinite;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+
+        i {
+            font-size: 32px;
+        }
+
+        &:hover {
+            -webkit-animation: none;
+            animation: none;
+        }
+    }
+
+    @keyframes play-btn {
+        0% {
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+        }
+
+        70% {
+            box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+        }
+
+        100% {
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        }
+    }
+}
+
+.watch-video-content {
+
+    .watch-video-top {
+        background-color: $background-color3;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        padding: $inner-30 - 10 $inner-60;
+
+        h2 {
+            margin: 0;
+        }
+
+        @include tablet {
+            padding: $inner-30 - 15 $inner-30;
+        }
+    }
+
+    .watch-video-bottom {
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+        background-color: $background-color1;
+        padding: $inner-50 $inner-60;
+
+        p {
+            margin: 0;
+        }
+
+        @include tablet {
+            padding: 30px;
+        }
+
+    }
+
+    @include laptop {
+        padding-left: 15px;
+    }
+
+    @include tablet {
+        padding-left: 15px;
+    }
+
+}
+
+.watch-arrow {
+    margin: 20px;
+
+    @include laptop {
+        display: none;
+    }
+
+    @include tablet {
+        display: none;
+    }
 }
 
 /* ==============================================
@@ -581,131 +741,156 @@ Shape  Animation
 
 ============================================== */
 
-@keyframes animationFramesOne{
+@keyframes animationFramesOne {
     0% {
-      transform:  translate(0px,0px)  rotate(0deg) ;
+        transform: translate(0px, 0px) rotate(0deg);
     }
-    20% {
-      transform:  translate(73px,-1px)  rotate(36deg) ;
-    }
-    40% {
-      transform:  translate(141px,72px)  rotate(72deg) ;
-    }
-    60% {
-      transform:  translate(83px,122px)  rotate(108deg) ;
-    }
-    80% {
-      transform:  translate(-40px,72px)  rotate(144deg) ;
-    }
-    100% {
-      transform:  translate(0px,0px)  rotate(0deg) ;
-    }
-  }
-  
-  
-  @-webkit-keyframes animationFramesOne {
-    0% {
-      -webkit-transform:  translate(0px,0px)  rotate(0deg) ;
-    }
-    20% {
-      -webkit-transform:  translate(73px,-1px)  rotate(36deg) ;
-    }
-    40% {
-      -webkit-transform:  translate(141px,72px)  rotate(72deg) ;
-    }
-    60% {
-      -webkit-transform:  translate(83px,122px)  rotate(108deg) ;
-    }
-    80% {
-      -webkit-transform:  translate(-40px,72px)  rotate(144deg) ;
-    }
-    100% {
-      -webkit-transform:  translate(0px,0px)  rotate(0deg) ;
-    }
-  }
-  
-  @keyframes animationFramesTwo{
-    0% {
-      transform:  translate(0px,0px)  rotate(0deg) scale(1) ;
-    }
-    20% {
-      transform:  translate(73px,-1px)  rotate(36deg) scale(0.9);
-    }
-    40% {
-      transform:  translate(141px,72px)  rotate(72deg) scale(1);
-    }
-    60% {
-      transform:  translate(83px,122px)  rotate(108deg) scale(1.2);
-    }
-    80% {
-      transform:  translate(-40px,72px)  rotate(144deg) scale(1.1);
-    }
-    100% {
-      transform:  translate(0px,0px)  rotate(0deg) scale(1);
-    }
-  }
-  
-  
-  @-webkit-keyframes animationFramesTwo {
-    0% {
-      -webkit-transform:  translate(0px,0px)  rotate(0deg) scale(1);
-    }
-    20% {
-      -webkit-transform:  translate(73px,-1px)  rotate(36deg) scale(0.9);
-    }
-    40% {
-      -webkit-transform:  translate(141px,72px)  rotate(72deg) scale(1);
-    }
-    60% {
-      -webkit-transform:  translate(83px,122px)  rotate(108deg) scale(1.2);
-    }
-    80% {
-      -webkit-transform:  translate(-40px,72px)  rotate(144deg) scale(1.1);
-    }
-    100% {
-      -webkit-transform:  translate(0px,0px)  rotate(0deg) scale(1);
-    }
-  }
-  
-  @keyframes animationFramesThree{
-    0% {
-      transform:  translate(-300px,151px)  rotate(0deg) ;
-    }
-    100% {
-      transform:  translate(251px,-200px)  rotate(180deg) ;
-    }
-  }
-  
-  
-  @-webkit-keyframes animationFramesThree {
-    0% {
-      -webkit-transform:  translate(-300px,151px)  rotate(0deg) ;
-    }
-    100% {
-      -webkit-transform:  translate(251px,-200px)  rotate(180deg) ;
-    }
-  }
 
-.themeix-ani{
-	.shape-one{
-		position: absolute;
-    left: 9%;
-    top: 28%;
-    animation: animationFramesOne 25s alternate infinite linear;
-	}
-	.shape-two{
-		    position: absolute;
-    left: 38%;
-    bottom: 25%;
-    animation: animationFramesTwo 35s alternate infinite linear;
-	}
-	.shape-tree{
-		    position: absolute;
-    bottom: 60%;
-    right: 10%;
-    animation: animationFramesThree  20s infinite linear;
-	}	
-	@include tablet{
-	   display:none;
-	}
+    20% {
+        transform: translate(73px, -1px) rotate(36deg);
+    }
+
+    40% {
+        transform: translate(141px, 72px) rotate(72deg);
+    }
+
+    60% {
+        transform: translate(83px, 122px) rotate(108deg);
+    }
+
+    80% {
+        transform: translate(-40px, 72px) rotate(144deg);
+    }
+
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+
+
+@-webkit-keyframes animationFramesOne {
+    0% {
+        -webkit-transform: translate(0px, 0px) rotate(0deg);
+    }
+
+    20% {
+        -webkit-transform: translate(73px, -1px) rotate(36deg);
+    }
+
+    40% {
+        -webkit-transform: translate(141px, 72px) rotate(72deg);
+    }
+
+    60% {
+        -webkit-transform: translate(83px, 122px) rotate(108deg);
+    }
+
+    80% {
+        -webkit-transform: translate(-40px, 72px) rotate(144deg);
+    }
+
+    100% {
+        -webkit-transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+
+@keyframes animationFramesTwo {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg) scale(1);
+    }
+
+    20% {
+        transform: translate(73px, -1px) rotate(36deg) scale(0.9);
+    }
+
+    40% {
+        transform: translate(141px, 72px) rotate(72deg) scale(1);
+    }
+
+    60% {
+        transform: translate(83px, 122px) rotate(108deg) scale(1.2);
+    }
+
+    80% {
+        transform: translate(-40px, 72px) rotate(144deg) scale(1.1);
+    }
+
+    100% {
+        transform: translate(0px, 0px) rotate(0deg) scale(1);
+    }
+}
+
+
+@-webkit-keyframes animationFramesTwo {
+    0% {
+        -webkit-transform: translate(0px, 0px) rotate(0deg) scale(1);
+    }
+
+    20% {
+        -webkit-transform: translate(73px, -1px) rotate(36deg) scale(0.9);
+    }
+
+    40% {
+        -webkit-transform: translate(141px, 72px) rotate(72deg) scale(1);
+    }
+
+    60% {
+        -webkit-transform: translate(83px, 122px) rotate(108deg) scale(1.2);
+    }
+
+    80% {
+        -webkit-transform: translate(-40px, 72px) rotate(144deg) scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: translate(0px, 0px) rotate(0deg) scale(1);
+    }
+}
+
+@keyframes animationFramesThree {
+    0% {
+        transform: translate(-300px, 151px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(251px, -200px) rotate(180deg);
+    }
+}
+
+
+@-webkit-keyframes animationFramesThree {
+    0% {
+        -webkit-transform: translate(-300px, 151px) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: translate(251px, -200px) rotate(180deg);
+    }
+}
+
+.themeix-ani {
+    .shape-one {
+        position: absolute;
+        left: 9%;
+        top: 28%;
+        animation: animationFramesOne 25s alternate infinite linear;
+    }
+
+    .shape-two {
+        position: absolute;
+        left: 38%;
+        bottom: 25%;
+        animation: animationFramesTwo 35s alternate infinite linear;
+    }
+
+    .shape-tree {
+        position: absolute;
+        bottom: 60%;
+        right: 10%;
+        animation: animationFramesThree 20s infinite linear;
+    }
+
+    @include tablet {
+        display: none;
+    }
 }
