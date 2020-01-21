@@ -11,26 +11,46 @@
         <!-- Fontawesome -->
         <script src="https://kit.fontawesome.com/cb8363daeb.js" crossorigin="anonymous"></script>
 
-        <!-- Custom -->
+        <!-- Custom CSS -->
         <link rel="stylesheet" href="{{site.baseurl}}/assets/css/style.css">
-        <title>
-            {% if page.title %}
-            {{site.title}} - {{page.title}}
-            {% else %}
-            {{site.title}}
-            {% endif %}
-        </title>
-        <meta itemprop="description" name="description" content="
-            {% if page.description %}
-            {{ page.description | truncate: 160 }}
-            {% else %}
-            {{ site.description | truncate: 160  }}
-            {% endif %}" />
-
+        
+        <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="{{site.baseurl}}/assets/images/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/assets/images/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/assets/images/favicon/favicon-16x16.png">
         <link rel="manifest" href="{{site.baseurl}}/assets/images/favicon/site.webmanifest">
+
+        <!-- HTML Meta Tags -->
+        {% if page.title %}
+        {% capture title %}{{site.title}} - {{page.title}}{% endcapture %}
+        {% else %}
+        {% capture title %}{{site.title}}{% endcapture %}
+        {% endif %}
+        {% if page.description %}
+        {% capture description %}{{ page.description | truncate: 160 }}{% endcapture %}
+        {% else %}
+        {% capture description %}{{ site.description | truncate: 160 }}{% endcapture %}
+        {% endif %}
+        <title>{{ title }}</title>
+        <meta itemprop="description" name="description" content="{{ description }}" />
+
+        <!-- Google / Search Engine Tags -->
+        <meta itemprop="name" content="{{ title }}">
+        <meta itemprop="description" content="{{ description }}">
+        <meta itemprop="image" content="{{site.baseurl}}/assets/images/banner.png">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="{{site.baseurl}}">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="{{ title }}">
+        <meta property="og:description" content="{{ description }}">
+        <meta property="og:image" content="{{site.baseurl}}/assets/images/banner.png">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="{{ title }}">
+        <meta name="twitter:description" content="{{ description }}">
+        <meta name="twitter:image" content="{{site.baseurl}}/assets/images/banner.png">
     </head>
 
     <body>
