@@ -1,6 +1,6 @@
 title: Architekkt
+description: Swift dependency graph visualizer for your iOS and macOS application to analyse software architecture.
 url: "/JekyllArchitekkt"
-logo: "/assets/images/header-logo.png"
 
 # Build settings
 theme: minima
