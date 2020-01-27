@@ -1,3 +1,91 @@
 ---
 ---
 
+@import "variables";
+@import "fonts";
+@import "functions";
+@import "typography";
+
+/* ==============================================
+
+Button
+
+============================================== */
+
+.btn-primary {
+
+    color: #fff;
+    background-image: linear-gradient(to right, #70D8FF, #79FCEA);
+    border-radius: 35px;
+    height: 40px;
+    border-style: none;
+    font-weight: $font-weight-semibold;
+    transition: all 0.3s ease-in-out;
+    @include font-size($small-font-size);
+
+    img {
+        height: 22px;
+        width: 22px;
+        object-fit: contain;
+    }
+
+}
+
+.btn-primary:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(112, 217, 255, 0.4);
+   }
+
+/* ==============================================
+
+Main
+
+============================================== */
+
+.main-area {
+    overflow: hidden;
+}
+
+/* ==============================================
+
+Header
+
+============================================== */
+
+nav {
+
+    img {
+        height: 50px;
+    }
+
+    .btn-primary {
+        @include tablet {
+            display: none;
+        }
+        @include mobile {
+            display: none;
+        }
+    }
+
+}
+
+.header-page-title {
+    position: relative;
+    z-index: 3;
+    padding-top: 90px;
+
+    @include mobile {
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+
+    @include tablet {
+        padding-top: 60px;
+        padding-bottom: 90px;
+    }
+
+    @include laptop {
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+}
