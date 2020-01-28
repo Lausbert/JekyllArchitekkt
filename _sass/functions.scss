@@ -38,6 +38,118 @@
   }
 }
 
+// Section Spacing
+
+@each $space in $sectionspace {
+  @each $sides2 in $sides2 {
+    .p-#{str-slice($sides2, 0, 1)}-#{$space} {
+      padding-#{$sides2}: #{$space}px;
+    }
+
+  }
+}
+
+@include larger-desktop {
+  @each $space in $sectionspace {
+    @each $sides2 in $sides2 {
+      .p-#{str-slice($sides2, 0, 1)}-#{$space} {
+        padding-#{$sides2}: #{$space * 0.9}px;
+      }
+
+    }
+  }
+}
+
+@include large-desktop {
+  @each $space in $sectionspace {
+    @each $sides2 in $sides2 {
+      .p-#{str-slice($sides2, 0, 1)}-#{$space} {
+        padding-#{$sides2}: #{$space * 0.8}px;
+      }
+
+    }
+  }
+}
+
+@include desktop {
+  @each $space in $sectionspace {
+    @each $sides2 in $sides2 {
+      .p-#{str-slice($sides2, 0, 1)}-#{$space} {
+        padding-#{$sides2}: #{$space * 0.6}px;
+      }
+
+    }
+  }
+}
+
+@include laptop {
+  @each $space in $sectionspace {
+    @each $sides2 in $sides2 {
+      .p-#{str-slice($sides2, 0, 1)}-#{$space} {
+        padding-#{$sides2}: #{$space * 0.5}px;
+      }
+
+    }
+  }
+}
+
+@include tablet {
+  @each $space in $sectionspace {
+    @each $sides2 in $sides2 {
+      .p-#{str-slice($sides2, 0, 1)}-#{$space} {
+        padding-#{$sides2}: #{$space * 0.4}px;
+      }
+
+    }
+  }
+}
+
+@include mobile {
+  @each $space in $sectionspace {
+    @each $sides2 in $sides2 {
+      .p-#{str-slice($sides2, 0, 1)}-#{$space} {
+        padding-#{$sides2}: #{$space * 0.3}px;
+      }
+
+    }
+  }
+}
+
+// Inner Spacing
+
+@each $space in $innerspace {
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px;
+    }
+
+  }
+}
+
+@include tablet {
+  @each $space in $innerspace {
+    @if $space>20 {
+      @each $side in $sides {
+        .m-#{str-slice($side, 0, 1)}-#{$space} {
+          margin-#{$side}: #{$space - 20}px;
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  @each $space in $innerspace {
+    @if $space>20 {
+      @each $side in $sides {
+        .m-#{str-slice($side, 0, 1)}-#{$space} {
+          margin-#{$side}: #{$space - 20}px;
+        }
+      }
+    }
+  }
+}
+
 // Font Size
 @mixin font-size($font-size-base) {
   font-size: ($font-size-base * 10) + px;

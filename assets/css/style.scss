@@ -39,12 +39,40 @@ Button
 
 /* ==============================================
 
+Helper
+
+============================================== */
+
+div[class*="-wrapper"] {
+    position: relative;
+    z-index: 3;
+}
+
+div[class*="-title"] {
+
+    display: flex;
+    align-items: center;
+
+    img {
+        height: 2.1rem;
+        width: 2.1rem;
+    }
+    
+    h3 {
+        margin: 0;
+        padding-left: 0.7rem;
+    }
+
+}
+
+/* ==============================================
+
 Main
 
 ============================================== */
 
 .main-area {
-    overflow: visible;
+    overflow: hidden;
 }
 
 /* ==============================================
@@ -107,32 +135,30 @@ Teaser
 
 ============================================== */
 
-.teaser {
+.teaser-wrapper {
 
-    padding: 120px 50px 100px 0px;
+    padding: 120px 0px 0px 0px;
     z-index: 3;
-    position: relative;
     overflow: visible;
 
     @include desktop {
-        padding: 100px 0px 100px 0px;
+        padding: 100px 0px 0px 0px;
     }
 
     @include laptop {
-        padding: 40px 0px 100px 0px;
+        padding: 40px 0px 0px 0px;
     }
 
     @include tablet {
-        padding: 60px 0px 80px 0px;
+        padding: 40px 0px 0px 0px;
     }
 
     @include mobile {
-        padding: 60px 0px 80px 0px;
+        padding: 40px 0px 0px 0px;
     }
 
     .teaser-content {
-        padding-right: 1.9rem;
-        position: relative;
+        padding-right: 4rem;
 
         h5 {
             width: 70%;
@@ -148,11 +174,11 @@ Teaser
 
         @include mobile {
             padding-right: 0;
-            
+
             h5 {
                 width: 100%;
             }
-        }  
+        }
 
     }
 
@@ -160,30 +186,37 @@ Teaser
         position: absolute;
         top: -110px;
         left: -250px;
-        z-index: 3;
 
         img {
-            max-width: 130%;
+            max-width: 125%;
+        }
+
+        @include larger-desktop {
+            img {
+                max-width: 115%;
+            }
         }
 
         @include large-desktop {
             img {
-                max-width: 120%;
+                max-width: 110%;
             }
         }
 
         @include desktop {
-            
+
             top: -60px;
             left: -140px;
+
             img {
-                max-width: 100%;
+                max-width: 110%;
             }
         }
 
         @include laptop {
             top: -20px;
             left: -90px;
+
             img {
                 max-width: 120%;
             }
@@ -212,30 +245,30 @@ Teaser
 
     position: absolute;
     z-index: 2;
-    top: 13%;
+    top: 100px;
     right: -20px;
-    max-width: 47vw;
+    max-width: 45vw;
 
     img {
         max-width: 100%;
     }
 
     @include larger-desktop {
-        top: 18%;
+        top: 120px;
     }
 
     @include large-desktop {
-        top: 20%;
+        top: 140px;
     }
 
     @include desktop {
         max-width: 40vw;
-        top: 18%;
+        top: 140px;
     }
 
     @include laptop {
-        max-width: 44vw;
-        top: 15%;
+        max-width: 40vw;
+        top: 140px;
     }
 
     @include tablet {
@@ -285,3 +318,9 @@ Teaser
     }
 
 }
+
+/* ==============================================
+
+Services
+
+============================================== */
