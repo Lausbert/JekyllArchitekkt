@@ -203,7 +203,7 @@ Teaser
 
 }
 
-.teaser-background {
+.teaser-background-right {
 
     position: absolute;
     z-index: 2;
@@ -231,6 +231,44 @@ Teaser
     @include laptop {
         max-width: 44vw;
         top: 15%;
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+    @include mobile {
+        display: none;
+    }
+
+}
+
+.teaser-background-left {
+
+    position: absolute;
+    z-index: 1;
+    top: -100px;
+    left: 0;
+    right: 0;
+
+    img {
+        max-width: 100%;
+    }
+
+    @include larger-desktop {
+        top: -60px;
+    }
+
+    @include large-desktop {
+        top: -20px;
+    }
+
+    @include desktop {
+        top: 20px;
+    }
+
+    @include laptop {
+        top: 60px;
     }
 
     @include tablet {
