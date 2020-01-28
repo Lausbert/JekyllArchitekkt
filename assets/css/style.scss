@@ -134,6 +134,10 @@ Teaser
         padding-right: 1.9rem;
         position: relative;
 
+        h5 {
+            width: 70%;
+        }
+
         @include laptop {
             padding-right: 0;
         }
@@ -144,11 +148,12 @@ Teaser
 
         @include mobile {
             padding-right: 0;
-        }
+            
+            h5 {
+                width: 100%;
+            }
+        }  
 
-        h5 {
-            width: 70%;
-        }
     }
 
     .teaser-image {
