@@ -2,6 +2,18 @@
 
 // Responsive Layout
 
+@mixin larger-desktop {
+  @media (min-width: #{$large-desktop-device}) and (max-width: #{$larger-desktop-device}) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width: #{$desktop-device}) and (max-width: #{$large-desktop-device}) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: #{$laptop-device}) and (max-width: #{$desktop-device}) {
     @content;
