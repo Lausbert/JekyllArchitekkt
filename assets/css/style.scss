@@ -38,16 +38,21 @@ Button
 .btn-primary {
     @extend .btn-base;
     background-image: linear-gradient(to right, #70D8FF, #79FCEA);
+    box-shadow: 0 4px 8px rgba(112, 217, 255, 0.4);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 8px 16px rgba(112, 217, 255, 0.6);
 }
 
 .btn-secondary {
     @extend .btn-base;
     background-image: linear-gradient(to right, #F67B78, #F5C481);
+    box-shadow: 0 4px 8px rgba(246, 122, 120, 0.4);
 }
 
-.btn-primary:hover {
-    color: rgba(255, 255, 255, 1);
-    box-shadow: 0 5px 15px rgba(112, 217, 255, 0.4);
+.btn-secondary:hover {
+    box-shadow: 0 8px 16px rgba(246, 122, 120, 0.6);
 }
 
 /* ==============================================
@@ -85,12 +90,12 @@ div[class*="-backgrounditem"] {
     z-index: 2;
 
     img {
-        max-width: 70%;
+        max-width: 75%;
     }
 
     @include larger-desktop {
         img {
-            max-width: 70%;
+            max-width: 75%;
         }
     }
 
@@ -475,8 +480,26 @@ Video
 
 .video-backgrounditem {
 
-    right: -280px;
-    top: 2000px;
+    right: -240px;
+    top: 1950px;
+
+    @include larger-desktop {
+        top: 1900px;
+    }
+
+    @include large-desktop {
+        right: -330px;
+        top: 1770px;
+    }
+
+    @include desktop {
+        right: -390px;
+        top: 1700px;
+    }
+
+    @include laptop {
+        right: -430px;
+    }
 
 }
 

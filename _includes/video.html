@@ -1,10 +1,10 @@
 <section>
-    <div class="container p-t-350">
+    <div class="container p-t-220">
         <div class="video-wrapper">
             <div class="row mx-auto">
                 <div class="col-lg-6">
                     <div class="video-play">
-                        <video title="architekkt introduction video" controls>
+                        <video title="architekkt introduction video" id="video" controls>
                             <source src="assets/videos/video-short.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -22,7 +22,7 @@
                                 the structure of a small iOS
                                 program is examined.</p>
                         </div>
-                        <button type="button" class="btn btn-secondary mt-2">
+                        <button type="button" class="btn btn-secondary mt-2" onclick="video=document.getElementById('video');video.paused?video.play():video.pause();">
                             <img src="{{site.baseurl}}/assets/images/button_play.png" class="pb-1">
                             Play Video
                         </button>

@@ -2,7 +2,7 @@
 
 // Spacing 
 
-$sectionspace: (100, 130, 140, 350);
+$sectionspace: (100, 130, 140, 220, 350);
 $innerspace: (5, 10, 20, 30, 40, 50, 60, 70, 80, 90);
 $sides: (top, bottom, left, right);
 $sides2: (top, bottom);
@@ -10,6 +10,7 @@ $sides2: (top, bottom);
 $section-100: 100px;
 $section-130: 130px;
 $section-140: 140px;
+$section-220: 220px;
 $section-350: 350px;
 $inner-5: 5px;
 $inner-10: 10px;
@@ -29,7 +30,7 @@ $radius: 0.8rem;
 // shadow
 
 $shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-$strong-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+$strong-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
 
 // Fonts Color
 
