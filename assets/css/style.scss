@@ -1,5 +1,5 @@
 ---
----
+--- 
 
 @import "variables";
 @import "fonts";
@@ -57,7 +57,7 @@ div[class*="-title"] {
         height: 2.1rem;
         width: 2.1rem;
     }
-    
+
     h3 {
         margin: 0;
         padding-left: 0.7rem;
@@ -374,4 +374,34 @@ Services
         display: none;
     }
 
+}
+
+.card {
+
+    width: 19rem;
+    height: 24rem;
+    margin-bottom: 4rem;
+    border-radius: 0.8rem;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+
+    img {
+        height: 12.5rem;
+    }
+
+    @include mobile {
+
+        img {
+            height: 8rem;
+        }
+
+        width: 14rem;
+        height: 19rem;
+    }
+
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
