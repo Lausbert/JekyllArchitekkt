@@ -1,23 +1,25 @@
-<div class="container p-t-350">
-    <div class="service-wrapper">
-        <div class="service-title">
-            <img src="{{site.baseurl}}/assets/images/service_icon.png">
-            <h3 class="font-weight-semibold">Features</h3>
-        </div>
-        <div class="row m-t-80">
-            {% for service in site.data.services %}
-            <div class="col">
-                <div class="card text-center mx-auto">
-                    <img class="card-img-top" src="{{service.image}}" alt="Card image cap">
-                    <div class="card-body">
-                        <h6 class="card-title font-weight-bold">{{service.title}}</h6>
-                        <p class="card-text font-weight-light small mt-4">{{service.description}}</p>
-                    </div>
-                  </div>
+<section>
+    <div class="container p-t-350">
+        <div class="service-wrapper">
+            <div class="service-title">
+                <img src="{{site.baseurl}}/assets/images/service_icon.png">
+                <h2>Features</h2>
             </div>
-            {% endfor %}
+            <div class="row m-t-80">
+                {% for service in site.data.services %}
+                <div class="col">
+                    <div class="card text-center mx-auto">
+                        <img class="card-img-top" src="{{service.image}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h6 class="card-title font-weight-bold">{{service.title}}</h6>
+                            <p class="card-text font-weight-light small mt-4">{{service.description}}</p>
+                        </div>
+                      </div>
+                </div>
+                {% endfor %}
+        </div>
     </div>
-</div>
-<div class="service-background">
+</section>
+<div class="service-backgrounditem">
     <img src="{{page.baseurl}}/assets/images/orange_bubble.png">
 </div>

@@ -1,5 +1,5 @@
 ---
---- 
+---
 
 @import "variables";
 @import "fonts";
@@ -12,13 +12,12 @@ Button
 
 ============================================== */
 
-.btn-primary {
+.btn-base {
 
     color: #fff;
-    background-image: linear-gradient(to right, #70D8FF, #79FCEA);
     border-radius: 2rem;
     height: 2.9rem;
-    padding-right: 1.1rem;
+    padding: 0 2rem 0 1.5rem;
     border-style: none;
     font-weight: $font-weight-semibold;
     transition: all 0.3s ease-in-out;
@@ -30,6 +29,20 @@ Button
         object-fit: contain;
     }
 
+    @include mobile {
+        width: 100%;
+    }
+
+}
+
+.btn-primary {
+    @extend .btn-base;
+    background-image: linear-gradient(to right, #70D8FF, #79FCEA);
+}
+
+.btn-secondary {
+    @extend .btn-base;
+    background-image: linear-gradient(to right, #F67B78, #F5C481);
 }
 
 .btn-primary:hover {
@@ -56,11 +69,55 @@ div[class*="-title"] {
     img {
         height: 2.1rem;
         width: 2.1rem;
+        margin-right: 0.7rem
     }
 
-    h3 {
+    h2 {
         margin: 0;
-        padding-left: 0.7rem;
+        font-weight: $font-weight-semibold;
+    }
+
+}
+
+div[class*="-backgrounditem"] {
+
+    position: absolute;
+    z-index: 2;
+
+    img {
+        max-width: 70%;
+    }
+
+    @include larger-desktop {
+        img {
+            max-width: 70%;
+        }
+    }
+
+    @include large-desktop {
+        img {
+            max-width: 65%;
+        }
+    }
+
+    @include desktop {
+        img {
+            max-width: 45%;
+        }
+    }
+
+    @include laptop {
+        img {
+            max-width: 40%;
+        }
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+    @include mobile {
+        display: none;
     }
 
 }
@@ -231,14 +288,6 @@ Teaser
         }
     }
 
-    .btn-primary {
-
-        @include mobile {
-            width: 100%;
-        }
-
-    }
-
 }
 
 .teaser-background-right {
@@ -325,45 +374,17 @@ Services
 
 ============================================== */
 
-.service-background {
+.service-backgrounditem {
 
-    position: absolute;
     left: -80px;
     top: 930px;
-    z-index: 2;
-
-    img {
-        max-width: 70%;
-    }
-
-    @include larger-desktop {
-        img {
-            max-width: 70%;
-        }
-    }
-
-    @include large-desktop {
-        img {
-            max-width: 65%;
-        }
-    }
 
     @include desktop {
-
         left: -60px;
-
-        img {
-            max-width: 45%;
-        }
     }
 
     @include laptop {
-
         left: -55px;
-
-        img {
-            max-width: 40%;
-        }
     }
 
     @include tablet {
@@ -381,9 +402,9 @@ Services
     width: 19rem;
     height: 24rem;
     margin-bottom: 4rem;
-    border-radius: 0.8rem;
+    border-radius: $radius;
     border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: $shadow;
     transition: 0.3s;
 
     img {
@@ -443,5 +464,55 @@ Services
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: $strong-shadow;
+}
+
+/* ==============================================
+
+Video
+
+============================================== */
+
+.video-backgrounditem {
+
+    right: -280px;
+    top: 2000px;
+
+}
+
+.video-play {
+
+    video {
+        max-width: 100%;
+        border-style: solid;
+        border-width: 2rem;
+        border-radius: $radius;
+        border-color: white;
+        box-shadow: $shadow;
+
+        @include mobile {
+            border-width: 1rem;
+        }
+    }
+
+}
+
+.video-content {
+    padding: 0 4rem 0 4rem;
+
+    @include laptop {
+        padding: 2rem 0 0 0;
+    }
+
+    @include tablet {
+        padding: 2rem 0 0 0;
+    }
+
+    @include mobile {
+        padding: 2rem 0 0 0;
+    }
+
+    .video-body {
+        line-height: 2rem;
+    }
 }

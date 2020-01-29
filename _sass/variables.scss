@@ -22,6 +22,15 @@ $inner-70: 70px;
 $inner-80: 80px;
 $inner-90: 90px;
 
+// radius
+
+$radius: 0.8rem;
+
+// shadow
+
+$shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+$strong-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+
 // Fonts Color
 
 $font-color-base: #45476F !default;
@@ -33,7 +42,7 @@ $placeholder-color: #45476F !default;
 $font-family-base: 'Poppins',
 sans-serif !default;
 $font-size-base: 1.6 !default;
-$small-font-size: 1.3;
+$small-font-size: 1.4;
 $big-line-height: 1.3;
 $big-font-size: $font-size-base * 2.5;
 $font-weight-light: 300;
