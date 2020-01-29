@@ -324,3 +324,54 @@ Teaser
 Services
 
 ============================================== */
+
+.service-background {
+
+    position: absolute;
+    left: -80px;
+    top: 930px;
+    z-index: 2;
+
+    img {
+        max-width: 70%;
+    }
+
+    @include larger-desktop {
+        img {
+            max-width: 70%;
+        }
+    }
+
+    @include large-desktop {
+        img {
+            max-width: 65%;
+        }
+    }
+
+    @include desktop {
+
+        left: -60px;
+
+        img {
+            max-width: 45%;
+        }
+    }
+
+    @include laptop {
+
+        left: -55px;
+
+        img {
+            max-width: 40%;
+        }
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+    @include mobile {
+        display: none;
+    }
+
+}
