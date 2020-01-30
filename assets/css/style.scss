@@ -89,7 +89,7 @@ Helper
 ============================================== */
 
 body {
-    position: relative;
+    overflow-x: hidden;
 }
 
 div[class*="-wrapper"] {
@@ -165,6 +165,7 @@ Main
 ============================================== */
 
 .main-area {
+    position: relative;
     overflow: hidden;
 }
 
