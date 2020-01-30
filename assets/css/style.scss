@@ -12,16 +12,10 @@ Form
 
 ============================================== */
 
-form {
-    border-radius: $radius;
-    box-shadow: $shadow;
-    height: 2.9rem;
-}
-
 input, textarea {
-    margin: auto 1rem auto 1rem;
     font-weight: $font-weight-light;
     border: none;
+    min-width: 0;
 }
 
 textarea:focus, input:focus{
@@ -93,6 +87,10 @@ Button
 Helper
 
 ============================================== */
+
+body {
+    position: relative;
+}
 
 div[class*="-wrapper"] {
     position: relative;
@@ -233,7 +231,6 @@ Teaser
 .teaser-wrapper {
 
     padding: 120px 0px 0px 0px;
-    z-index: 3;
     overflow: visible;
 
     @include desktop {
@@ -653,11 +650,15 @@ img {
     form {
         display: flex;
         max-width: 75%;
-
+        border-radius: $radius;
+        box-shadow: $shadow;
+        height: 2.9rem;
+        
         input {
             flex: 1;
             flex-shrink: 1;
             min-width: 0;
+            margin: auto 1rem auto 1rem;
         }
 
         button {
@@ -701,4 +702,33 @@ img {
         left: -40px;
     }
 
+}
+
+/* ==============================================
+
+Footer
+
+============================================== */
+
+footer {
+    margin-bottom: 9rem;
+}
+
+.footer-image {
+    
+    img {
+        width: 100%;
+    }
+}
+
+.footer-background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    img {
+        width: 100%;
+    }
 }
