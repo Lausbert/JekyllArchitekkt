@@ -7,6 +7,15 @@ body {
    color: $font-color-base;
 }
 
+a {
+   color: $font-color-base;
+   font-weight: $font-weight-semibold;
+}
+
+a:hover {
+   color: $font-color-base;
+}
+
 // Placeholder
 @include placeholder {
    font-size: $font-size-base;

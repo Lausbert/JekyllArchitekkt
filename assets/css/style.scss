@@ -8,6 +8,28 @@
 
 /* ==============================================
 
+Form
+
+============================================== */
+
+form {
+    border-radius: $radius;
+    box-shadow: $shadow;
+    height: 2.9rem;
+}
+
+input, textarea {
+    margin: auto 1rem auto 1rem;
+    font-weight: $font-weight-light;
+    border: none;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+/* ==============================================
+
 Button
 
 ============================================== */
@@ -17,7 +39,7 @@ Button
     color: #fff;
     border-radius: 2rem;
     height: 2.9rem;
-    padding: 0 2rem 0 1.5rem;
+    padding: 0 2rem 0 1rem;
     border-style: none;
     font-weight: $font-weight-semibold;
     transition: all 0.3s ease-in-out;
@@ -53,6 +75,17 @@ Button
 
 .btn-secondary:hover {
     box-shadow: 0 8px 16px rgba(246, 122, 120, 0.6);
+}
+
+.btn-tertiary {
+    @extend .btn-secondary;
+    border-radius: $radius;
+    padding: 0;
+
+    img {
+        height: 2.1rem;
+        width: 2.1rem;
+    }
 }
 
 /* ==============================================
@@ -478,6 +511,40 @@ Video
 
 ============================================== */
 
+.video-wrapper {
+
+    @include laptop {
+        display: none;
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+    @include mobile {
+        display: none;
+    }
+
+}
+
+.video-wrapper-reversed {
+
+    display: none;
+
+    @include laptop {
+        display: block;
+    }
+
+    @include tablet {
+        display: block;
+    }
+
+    @include mobile {
+        display: block;
+    }
+
+}
+
 .video-backgrounditem {
 
     right: -240px;
@@ -521,21 +588,116 @@ Video
 }
 
 .video-content {
-    padding: 0 4rem 0 4rem;
+    padding: 0 3rem 0 3rem;
 
     @include laptop {
-        padding: 2rem 0 0 0;
+        padding: 0 0 3rem 0;
     }
 
     @include tablet {
-        padding: 2rem 0 0 0;
+        padding: 0 0 3rem 0;
     }
 
     @include mobile {
-        padding: 2rem 0 0 0;
+        padding: 0 0 3rem 0;
     }
 
     .video-body {
         line-height: 2rem;
     }
+
+    button {
+        img {
+            width: 1.4rem;
+            height: 1.4rem;
+            margin-left: 0.3rem;
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+/* ==============================================
+
+Newsletter
+
+============================================== */
+
+.newsletter-image {
+    
+img {
+    max-width: 100%;
+}
+
+}
+
+.newsletter-content {
+    padding: 0 3rem 0 3rem;
+
+    @include laptop {
+        padding: 0 0 3rem 0;
+    }
+
+    @include tablet {
+        padding: 0 0 3rem 0;
+    }
+
+    @include mobile {
+        padding: 0 0 3rem 0;
+    }
+
+    .newsletter-body {
+        line-height: 2rem;
+    }
+
+    form {
+        display: flex;
+        max-width: 75%;
+
+        input {
+            flex: 1;
+            flex-shrink: 1;
+            min-width: 0;
+        }
+
+        button {
+            width: 4rem;
+            flex-shrink: 0;
+        }
+
+        @include desktop {
+            max-width: 100%;
+        }
+
+        @include laptop {
+            max-width: 50%;
+        }
+
+        @include mobile {
+            max-width: 100%;
+        }
+
+    }
+}
+
+.newsletter-backgrounditem {
+
+    left: 200px;
+
+    @include larger-desktop {
+        left: 140px;
+    }
+
+    @include large-desktop {
+        left: 70px;
+    }
+
+    @include desktop {
+        left: 30px;
+    }
+
+    @include laptop {
+        top: 3030px;
+        left: -40px;
+    }
+
 }
