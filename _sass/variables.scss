@@ -36,10 +36,9 @@ $strong-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
 
 // Fonts Color
 
-$font-color-base: #45476F !default;
-$font-color2: #45476F;
-$placeholder-color: #45476F !default;
-$font-color4: white;
+$font-color-dark: #45476F;
+$font-color-light: white;
+$background-color-dark: #45476F;
 
 // Typography
 
@@ -61,7 +60,7 @@ $h3-font-size: $font-size-base * 1.75;
 $h4-font-size: $font-size-base * 1.5;
 $h5-font-size: $font-size-base * 1.25;
 $h6-font-size: $font-size-base;
-$headings-color: $font-color2;
+$headings-color: $font-color-dark;
 $headings-font-family: $font-family-base;
 $headings-line-height: 1.4 !default;
 

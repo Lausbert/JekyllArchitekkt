@@ -1,31 +1,23 @@
 <footer>
-    <div class="container">
-        <div class="footer-wrapper">
-            <div class="footer-nav white-all">
-                <div class="row">
-                    <div class="col-md-12 col-lg-3 pl-0 footer-logo">
-                        <a href="{{site.url}}">
-                            <img src="{{site.baseurl}}/assets/images/footer_logo.png">
-                        </a>
-                    </div>
-                    <div class="col-md-12 col-lg-6 text-center copyright-label">
-                        <span class="small">
-                            © <script>document.write(new Date().getFullYear())</script> Architekkt.  All rights reserved.
-                        </span>
-                    </div>
-                    <div class="col-md-12 col-lg-3 my-auto">
-                        <div class="row">
-                            <div class="col-xs-4">
-                                <a class="small" href="{{site.url}}"><span>Home</span></a>
-                            </div>
-                            <div class="col-xs-4">
-                                <a class="small" href="{{site.url}}/imprint.html"><span>Imprint</span></a>
-                            </div>
-                            <div class="col-xs-4">
-                                <a class="small" href="{{site.url}}/privacy.html"><span>Privacy Policy</span></a>
-                            </div>
-                        </div>                       
-                    </div>
+    <div class="footer-wrapper background-color-dark">
+        <div class="footer-nav white-all">
+            <div class="row">
+                <div class="col-md-12 col-lg-4 my-auto footer-nav-reversed">
+                    {% include footer_nav.html %}
+                </div>
+                <div class="col-md-12 col-lg-4 text-center footer-logo">
+                    <a href="{{site.url}}">
+                        <img src="{{site.baseurl}}/assets/images/footer_logo.png">
+                    </a>
+                </div>
+                <div class="col-md-12 col-lg-4 text-center my-auto">
+                    <span class="small">
+                        ©
+                        <script>document.write(new Date().getFullYear())</script> Architekkt. All rights reserved.
+                    </span>
+                </div>
+                <div class="col-md-12 col-lg-4 my-auto footer-nav-normal">
+                    {% include footer_nav.html %}
                 </div>
             </div>
         </div>

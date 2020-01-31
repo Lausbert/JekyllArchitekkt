@@ -8,6 +8,16 @@
 
 /* ==============================================
 
+Color
+
+============================================== */
+
+.background-color-dark {
+    background-color: $background-color-dark;
+}
+
+/* ==============================================
+
 Form
 
 ============================================== */
@@ -722,6 +732,37 @@ Contact
     img {
         width: 135%;
     }
+
+    @include large-desktop {
+        left: -20px;
+        img {
+            width: 110%;
+        }
+    }
+
+    @include desktop {
+        left: 30px;
+        bottom: 60px;
+        img {
+            width: 100%;
+        }
+    }
+
+    @include laptop {
+        left: -20px;
+        bottom: 10px;
+        img {
+            width: 110%;
+        }
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+    @include mobile {
+        display: none;
+    }
 }
 
 .contact-content {
@@ -753,6 +794,33 @@ Contact
         padding-top: 1rem;
         resize: none;
         height: 13rem;
+
+    }
+
+    p {
+        margin-top: 1rem;
+    }
+
+    @include laptop {
+        padding: 0 0 0 3rem;
+
+        textarea {
+            height: 5rem;
+            margin-top: 1rem;
+        }
+
+        input {
+            margin-top: 0;
+        }
+
+        button {
+            margin-top: 0.5rem;
+        }
+
+        p {
+            margin-top: 0;
+        }
+
     }
 
 }
@@ -767,16 +835,32 @@ Footer
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -15px;
     z-index: 1;
 
     img {
         width: 100%;
     }
+    
+    @include larger-desktop {
+        bottom: 35px;
+    }
+
+    @include large-desktop {
+        bottom: 55px;
+    }
+
+    @include desktop {
+        bottom: 130px;
+    }
+
+    @include laptop {
+        bottom: 220px;
+    }
+    
 }
 
 .footer-nav {
-    background-color: #45476F;
     padding: 3rem 0 3rem 0;
 
     img {
@@ -789,46 +873,78 @@ Footer
     }
 
     .row {
-        justify-content: space-between;
-    }
-
-    .col {
-        justify-content: space-between;
-    }
-
-    .copyright-label {
-        margin-top: auto;
-        margin-bottom: auto;
-
-
-        @include laptop {
-            margin-top: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        @include tablet {
-            margin-top: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        @include mobile {
-            margin-top: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
+        justify-content: space-around;
     }
 
     .footer-logo {
         @include laptop {
             text-align: center;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
         }
         
         @include tablet{
             text-align: center;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
         @include mobile {
             text-align: center;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
         }
+    }
+
+    .footer-nav-item {
+        padding-right: 1.5rem;
+
+        @include laptop {
+            padding-right: 0.75rem;
+            padding-left: 0.75rem;
+        }
+        
+        @include tablet{
+            padding-right: 0.75rem;
+            padding-left: 0.75rem;
+        }
+
+        @include mobile {
+            padding-right: 0.75rem;
+            padding-left: 0.75rem;
+        }
+    }
+
+    .footer-nav-reversed {
+        display: none;
+
+        @include laptop {
+            display: block;
+        }
+
+        @include tablet {
+            display: block;
+        }
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+    .footer-nav-normal {
+
+        @include laptop {
+            display: none;
+        }
+
+        @include tablet {
+            display: none;
+        }
+
+        @include mobile {
+            display: none;
+        }
+
     }
 
 }

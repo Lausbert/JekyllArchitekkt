@@ -4,23 +4,23 @@ body {
    @include font-size($font-size-base);
    line-height: $line-height-base;
    font-weight: $font-weight-normal;
-   color: $font-color-base;
+   color: $font-color-dark;
 }
 
 a {
-   color: $font-color-base;
+   color: $font-color-dark;
    font-weight: $font-weight-semibold;
 }
 
 a:hover {
-   color: $font-color-base;
+   color: $font-color-dark;
 }
 
 // Placeholder
 @include placeholder {
    font-size: $font-size-base;
    line-height: $line-height-base;
-   color: $placeholder-color;
+   color: $font-color-dark;
    font-weight: $font-weight-normal;
 }
 
@@ -107,7 +107,7 @@ h4,
 h5,
 h6 {
    a {
-      color: $font-color2;
+      color: $font-color-dark;
    }
 }
 
@@ -171,6 +171,6 @@ small,
 
 .white-all{
    h1,h2,h3,h4,h5,h6,p,a,span,label,input,textarea,em,b,*{
-     color:$font-color4 !important;
+     color:$font-color-light !important;
    }
 }
