@@ -1,14 +1,14 @@
 <section>
     <div class="container p-t-350">
         <div class="service-wrapper">
-            <div class="service-title">
+            <div class="service-title" data-aos="fade-up">
                 <img src="{{site.baseurl}}/assets/images/service_icon.png">
                 <h2>Features</h2>
             </div>
             <div class="row m-t-80">
                 {% for service in site.data.services %}
                 <div class="col">
-                    <div class="card text-center mx-auto">
+                    <div class="card text-center mx-auto" data-aos="fade-up">
                         <img class="card-img-top" src="{{service.image}}" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title font-weight-bold">{{service.title}}</h6>
