@@ -823,6 +823,36 @@ Contact
 
     }
 
+    @include tablet {
+        padding: 0 2.5rem 0 2.5rem;
+    }
+
+    @include mobile {
+        padding: 0 1rem 0 1rem;
+    }
+
+}
+
+.contact-container {
+    @include tablet {
+        padding-top: 4rem;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+        background-color: $background-color-dark;
+        max-width: none;
+    }
+    @include mobile {
+        padding-top: 4rem;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+        background-color: $background-color-dark;
+        max-width: none;
+    }
+
 }
 
 /* ==============================================
@@ -856,6 +886,14 @@ Footer
 
     @include laptop {
         bottom: 220px;
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+    @include mobile {
+        display: none;
     }
     
 }
