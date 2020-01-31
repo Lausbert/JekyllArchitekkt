@@ -18,6 +18,10 @@ input, textarea {
     min-width: 0;
 }
 
+input::placeholder, textarea::placeholder {
+    font-weight: $font-weight-light;
+}
+
 textarea:focus, input:focus{
     outline: none;
 }
@@ -659,7 +663,7 @@ img {
             flex: 1;
             flex-shrink: 1;
             min-width: 0;
-            margin: auto 1rem auto 1rem;
+            margin: auto 1rem auto 1.5rem;
         }
 
         button {
@@ -716,9 +720,11 @@ footer {
 }
 
 .footer-image {
-    
+    position: relative;
+    left: -145px;
+
     img {
-        width: 100%;
+        width: 135%;
     }
 }
 
@@ -732,4 +738,37 @@ footer {
     img {
         width: 100%;
     }
+}
+
+.contact-wrapper {
+
+    padding: 0 0 0 5.5rem;
+
+    button {
+        img {
+            width: 1.4rem;
+            height: 1.4rem;
+            margin-left: 0.3rem;
+            margin-right: 0.5rem;
+        }
+    }
+
+    input, textarea {
+        border-radius: $radius;
+        box-shadow: $shadow;
+        padding: 0 1.5rem 0 1.5rem;
+    }
+
+    input {
+        width: 80%;
+        height: 2.9rem;
+    }
+
+    textarea {
+        width: 100%;
+        padding-top: 1rem;
+        resize: none;
+    }
+
+
 }

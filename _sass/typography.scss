@@ -165,3 +165,12 @@ small,
 .font-weight-light {
    font-weight: $font-weight-light !important;
 }
+
+// White Font
+
+
+.white-all{
+   h1,h2,h3,h4,h5,h6,p,a,span,label,input,textarea,em,b,*{
+     color:$font-color4 !important;
+   }
+}
