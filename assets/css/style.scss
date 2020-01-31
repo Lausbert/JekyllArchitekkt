@@ -711,11 +711,11 @@ img {
 
 /* ==============================================
 
-Footer
+Contact
 
 ============================================== */
 
-.footer-image {
+.contact-image {
     position: relative;
     left: -145px;
 
@@ -724,19 +724,7 @@ Footer
     }
 }
 
-.footer-background {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-
-    img {
-        width: 100%;
-    }
-}
-
-.contact-wrapper {
+.contact-content {
 
     padding: 0 0 0 5.5rem;
 
@@ -769,7 +757,26 @@ Footer
 
 }
 
+/* ==============================================
+
+Footer
+
+============================================== */
+
+.footer-background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    img {
+        width: 100%;
+    }
+}
+
 .footer-nav {
+    background-color: #45476F;
     padding: 3rem 0 3rem 0;
 
     img {
@@ -780,4 +787,48 @@ Footer
     span {
         white-space: nowrap;
     }
+
+    .row {
+        justify-content: space-between;
+    }
+
+    .col {
+        justify-content: space-between;
+    }
+
+    .copyright-label {
+        margin-top: auto;
+        margin-bottom: auto;
+
+
+        @include laptop {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @include tablet {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @include mobile {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .footer-logo {
+        @include laptop {
+            text-align: center;
+        }
+        
+        @include tablet{
+            text-align: center;
+        }
+
+        @include mobile {
+            text-align: center;
+        }
+    }
+
 }
