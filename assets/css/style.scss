@@ -825,10 +825,18 @@ Contact
 
     @include tablet {
         padding: 0 2.5rem 0 2.5rem;
+        
+        input {
+            width: 100%
+        }
     }
 
     @include mobile {
         padding: 0 1rem 0 1rem;
+
+        input {
+            width: 100%
+        }
     }
 
 }
