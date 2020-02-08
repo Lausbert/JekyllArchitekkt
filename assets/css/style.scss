@@ -67,7 +67,7 @@ Button
 
 .btn-primary {
     @extend .btn-base;
-    background-image: linear-gradient(to right, #70D8FF, #79FCEA);
+    background-image: linear-gradient(to right, $primary-color1, $primary-color2);
     box-shadow: 0 4px 8px rgba(112, 217, 255, 0.4);
 }
 
@@ -77,7 +77,7 @@ Button
 
 .btn-secondary {
     @extend .btn-base;
-    background-image: linear-gradient(to right, #F67B78, #F5C481);
+    background-image: linear-gradient(to right, $secondary-color1, $secondary-color2);
     box-shadow: 0 4px 8px rgba(246, 122, 120, 0.4);
 }
 
