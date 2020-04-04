@@ -192,7 +192,13 @@ Header
 nav {
 
     img {
-        height: 5rem;
+        height: auto;
+        width: 16.1rem;
+
+        @include mobile {
+            height: auto;
+            max-width: 100%;
+        }
     }
 
     .btn-primary {
@@ -448,74 +454,78 @@ Services
 
 }
 
-.card {
+.service-wrapper {
 
-    width: 19rem;
-    height: 24rem;
-    margin-bottom: 4rem;
-    border-radius: $double-radius;
-    border: none;
-    box-shadow: $shadow;
-    transition: 0.3s;
+    .card {
 
-    img {
-        height: 12.5rem;
-    }
-
-    @include large-desktop {
-
+        width: 19rem;
+        height: 24rem;
+        margin-bottom: 4rem;
+        border-radius: $double-radius;
+        border: none;
+        box-shadow: $shadow;
+        transition: 0.3s;
+    
         img {
-            height: 9rem;
+            height: 12.5rem;
         }
-
-        width: 17rem;
-        height: 21rem;
+    
+        @include large-desktop {
+    
+            img {
+                height: 9rem;
+            }
+    
+            width: 17rem;
+            height: 21rem;
+        }
+    
+        @include desktop {
+    
+            img {
+                height: 9rem;
+            }
+    
+            width: 16rem;
+            height: 20rem;
+        }
+    
+        @include laptop {
+    
+            img {
+                height: 9rem;
+            }
+    
+            width: 16rem;
+            height: 20rem;
+        }
+    
+        @include tablet {
+    
+            img {
+                height: 9rem;
+            }
+    
+            width: 15rem;
+            height: 19rem;
+        }
+    
+        @include mobile {
+    
+            img {
+                height: 9rem;
+            }
+    
+            width: 16rem;
+            height: 20rem;
+        }
+    
+    }
+    
+    .card:hover {
+        box-shadow: $strong-shadow;
     }
 
-    @include desktop {
-
-        img {
-            height: 9rem;
-        }
-
-        width: 16rem;
-        height: 20rem;
-    }
-
-    @include laptop {
-
-        img {
-            height: 9rem;
-        }
-
-        width: 16rem;
-        height: 20rem;
-    }
-
-    @include tablet {
-
-        img {
-            height: 9rem;
-        }
-
-        width: 15rem;
-        height: 19rem;
-    }
-
-    @include mobile {
-
-        img {
-            height: 9rem;
-        }
-
-        width: 16rem;
-        height: 20rem;
-    }
-
-}
-
-.card:hover {
-    box-shadow: $strong-shadow;
 }
 
 /* ==============================================
@@ -907,7 +917,7 @@ Footer
 }
 
 .footer-nav {
-    padding: 3rem 0 3rem 0;
+    padding: 3rem 0rem 3rem 0rem;
 
     img {
         height: 4.5em;
@@ -920,6 +930,10 @@ Footer
 
     .row {
         justify-content: space-around;
+    }
+
+    @include mobile {
+        padding: 3rem 1rem 3rem 1rem;
     }
 
     .footer-logo {
@@ -991,6 +1005,38 @@ Footer
             display: none;
         }
 
+    }
+
+}
+
+/* ==============================================
+
+Versions
+
+============================================== */
+
+.versions-wrapper {
+
+    .card {
+
+        margin-bottom: 4rem;
+        border-radius: $double-radius;
+        border: none;
+        box-shadow: $shadow;
+        transition: 0.3s; 
+
+        ul {
+            list-style-type: circle;
+        }
+        
+        .btn-base {
+            padding: 0 2rem 0 2rem;
+        }
+    
+    }
+    
+    .card:hover {
+        box-shadow: $strong-shadow;
     }
 
 }

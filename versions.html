@@ -1,0 +1,31 @@
+---
+layout: default
+title: Versions
+---
+<div class="p-t-100 p-b-100">
+    <div class="container">
+        <div class="versions-wrapper">
+            <div class="row justify-content-center">
+                {% for version in site.data.versions %}
+                    <div class="col-md-10">
+                        <div class="card" data-aos="fade-up">
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold">{{version.version}}</h6>
+                                    <ul>
+                                        {% for feature in version.features %}
+                                            <li class="card-text font-weight-light small">{{feature}}</li>
+                                        {% endfor %}
+                                    </ul>
+                                <a class="float-right" href="{{site.baseurl}}/assets/versions/{{version.version}}/Architekkt.zip" download="Architekkt.zip">
+                                    <button type="button" class="btn btn-primary">
+                                        Download
+                                    </button>
+                                </a>
+                            </div>
+                          </div>
+                    </div>
+                    {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
