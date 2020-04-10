@@ -1,8 +1,8 @@
 - version: 0.2.0
   features:
-    - removed target selection and visualising all targets within a scheme
     - added automatic scheme detection for .xcworkspace files
-    - added parsing and visualization of .xcworkspace files 
+    - added parsing and visualization of .xcworkspace files
+    - removed target selection and visualising all targets within a scheme
 - version: 0.1.0
   features:
     - added automatic scheme and target detection for .xcodeproj files
