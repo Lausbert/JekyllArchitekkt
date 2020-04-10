@@ -535,40 +535,6 @@ Video
 
 ============================================== */
 
-.video-wrapper {
-
-    @include laptop {
-        display: none;
-    }
-
-    @include tablet {
-        display: none;
-    }
-
-    @include mobile {
-        display: none;
-    }
-
-}
-
-.video-wrapper-reversed {
-
-    display: none;
-
-    @include laptop {
-        display: block;
-    }
-
-    @include tablet {
-        display: block;
-    }
-
-    @include mobile {
-        display: block;
-    }
-
-}
-
 .video-backgrounditem {
 
     right: -240px;
@@ -612,18 +578,18 @@ Video
 }
 
 .video-content {
-    padding: 0 3rem 0 3rem;
+    padding: 0rem 3rem 0 3rem;
 
     @include laptop {
-        padding: 0 0 3rem 0;
+        padding: 3rem 0 3rem 0;
     }
 
     @include tablet {
-        padding: 0 0 3rem 0;
+        padding: 3rem 0 3rem 0;
     }
 
     @include mobile {
-        padding: 0 0 3rem 0;
+        padding: 3rem 0 3rem 0;
     }
 
     .video-body {
