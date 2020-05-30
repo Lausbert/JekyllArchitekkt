@@ -1,7 +1,7 @@
 ---
 - version: 0.5.0
   features:
-  - added possibility to hflatten a specific node or all nodes of specific scope
+  - added possibility to flatten a specific node or all nodes of specific scope
   - added possibility to hide a specific node or all nodes of specific scope
   - added possibility to unfold all nodes of specific scope
   - added visibility tab in right pane
