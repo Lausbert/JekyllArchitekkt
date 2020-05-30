@@ -3,10 +3,10 @@
     <channel>
         <title>Architekkt</title>
         <item>
-            <title>0.4.1</title>
-            <pubDate>Fr., 01 Mai 2020 00:38:26 +0200</pubDate>
+            <title>0.5.0</title>
+            <pubDate>Sa., 30 Mai 2020 16:44:00 +0200</pubDate>
             <sparkle:minimumSystemVersion>10.15</sparkle:minimumSystemVersion>
-            <enclosure url="https://architekkt.io/assets/versions/newest/Architekkt.zip" sparkle:version="4" sparkle:shortVersionString="0.4.1" length="2627634" type="application/octet-stream" sparkle:edSignature="rtjmNNVUTW1cNA4Q1Sz49oVbQI2qVJYhwgwVhp5uhPuo8bkwPkm4zz8xnGATjNSzAWA6mFNFlhuEtY+eoyEdBQ=="/>
+            <enclosure url="https://architekkt.io/assets/versions/newest/Architekkt.zip" sparkle:version="5" sparkle:shortVersionString="0.5.0" length="2751032" type="application/octet-stream" sparkle:edSignature="UreNJ2Ijt5IbBCZ3SnyfuhghSH2h+NjnQjs5UZAd0auDjlqAceFHb27z4mg6fZ9GhfRePUDdDLv7oKOI2IMcCw=="/>
         </item>
     </channel>
 </rss>
