@@ -15,20 +15,6 @@ layout: default
                     <div class="entry-content blog-spacing">
                         {{page.content}}
                     </div>
-                    <div class="blog-share-tags blog-spacing">
-                        {% if page.tags.size > 0 %}
-                        <div class="blog-author-tags">
-                            <div class="list-inline blog-post-tags-area">
-                                <li class="list-inline-item">Tags:</li>
-                                {% for tag in page.tags %}
-                                <li class="list-inline-item"> <a class="text-capitalize"
-                                        href="/tag/{{ tag }}">{{ tag }}</a>{% if forloop.last == false %} {% endif %}
-                                </li>
-                                {% endfor %}
-                            </div>
-                        </div>
-                        {% endif %}
-                    </div>
                 </div>
             </div>
         </div>

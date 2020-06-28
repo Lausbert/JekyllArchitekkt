@@ -466,6 +466,11 @@ Services
         border: none;
         box-shadow: $shadow;
         transition: 0.3s;
+
+        .card-img-top {
+            border-top-left-radius: $double-radius;
+            border-top-right-radius: $double-radius;
+        }
     
         img {
             height: 12.5rem;
@@ -998,6 +1003,93 @@ Versions
         
         .btn-base {
             padding: 0 2rem 0 2rem;
+        }
+    
+    }
+    
+    .card:hover {
+        box-shadow: $strong-shadow;
+    }
+
+}
+
+/* ==============================================
+
+Blog
+
+============================================== */
+
+.blog-wrapper {
+
+    .card {
+
+        width: 22rem;
+        height: 28rem;
+        margin-bottom: 4rem;
+        border-radius: $double-radius;
+        border: none;
+        box-shadow: $shadow;
+        transition: 0.3s;
+
+        .card-img-top {
+            border-top-left-radius: $double-radius;
+            border-top-right-radius: $double-radius;
+        }
+    
+        img {
+            height: 15rem;
+            width: 100%;
+            object-fit: cover;
+        }
+    
+        @include large-desktop {
+    
+            img {
+                height: 11.5rem;
+            }
+    
+            width: 20rem;
+            height: 25rem;
+        }
+    
+        @include desktop {
+    
+            img {
+                height: 10rem;
+            }
+    
+            width: 19rem;
+            height: 24rem;
+        }
+    
+        @include laptop {
+    
+            img {
+                height: 10rem;
+            }
+    
+            width: 19rem;
+            height: 24rem;
+        }
+    
+        @include tablet {
+    
+            img {
+                height: 9rem;
+            }
+    
+            width: 18rem;
+            height: 23rem;
+        }
+    
+        @include mobile {
+    
+            img {
+                height: 10rem;
+            }
+    
+            width: 16rem;
+            height: 24rem;
         }
     
     }
