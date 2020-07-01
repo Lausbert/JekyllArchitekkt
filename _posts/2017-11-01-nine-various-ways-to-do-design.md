@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Seven various ways to do design."
-date: 2018-01-09 15:12:09 +0600
+date: 2017-01-09 15:12:09 +0600
 categories: [jekyll]
 post_image: "/assets/images/blog-img5.png"
 post_video: "/assets/videos/video-short.mp4"
