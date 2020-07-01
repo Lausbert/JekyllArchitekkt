@@ -1099,3 +1099,14 @@ Blog
     }
 
 }
+
+.blog-media{
+
+    img,
+    video {
+        border-top-left-radius: $double-radius;
+        border-top-right-radius: $double-radius;
+        width:100%;
+        object-fit: cover;
+	}
+}

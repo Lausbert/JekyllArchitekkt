@@ -4,10 +4,15 @@
         {% if page.url != "/" %}
         <div class="pagetitle">
             <div class="row justify-content-center"">
-                <div class="col-md-10">
+                <div class=" col-md-10">
                     <div>
                         <h1 class="big">{{page.title}}</h1>
                     </div>
+                    {% if page.layout == "post" %}
+                    <h6 class="font-weight-light mb-4">
+                        {{page.date | date_to_long_string}}
+                    </h6>
+                    {% endif %}
                 </div>
             </div>
         </div>

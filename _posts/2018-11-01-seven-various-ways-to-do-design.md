@@ -2,10 +2,9 @@
 layout: post
 title: "Seven various ways to do design."
 date: 2019-01-09 15:12:09 +0600
-tags: [design, html5]
 categories: [jekyll]
-author: monica
 post_image: "/assets/images/blog-img5.png"
+post_video: "/assets/videos/video-short.mp4"
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

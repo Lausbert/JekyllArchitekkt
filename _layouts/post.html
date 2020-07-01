@@ -7,11 +7,16 @@ layout: default
         <div class="blog-wrapper">
             <div class="row">
                 <div class="col-md-10 m-auto">
-                    {% if page.post_image %}
                     <div class="blog-media m-b-30">
+                        {% if page.post_video %}
+                        <video title="{{page.title}}" id="video" controls poster={{page.post_image}}>
+                            <source src="{{page.post_video}}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        {% elsif page.post_image %}
                         <img src="{{page.post_image}}" alt="{{page.title}}" />
+                        {% endif %}
                     </div>
-                    {% endif %}
                     <div class="entry-content blog-spacing">
                         {{page.content}}
                     </div>
