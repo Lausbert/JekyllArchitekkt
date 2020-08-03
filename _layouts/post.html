@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<div class="blog-area bg-color1 p-t-130 p-b-100">
+<div class="post-area bg-color1 p-t-130 p-b-100">
     <div class="container">
-        <div class="blog-wrapper">
+        <div class="post-wrapper">
             <div class="row">
                 <div class="col-md-10 m-auto">
-                    <div class="blog-media m-b-30">
+                    <div class="post-media m-b-30">
                         {% if page.post_video %}
                         <video title="{{page.title}}" id="video" controls poster={{page.post_image}}>
                             <source src="{{page.post_video}}" type="video/mp4">
@@ -17,7 +17,7 @@ layout: default
                         <img src="{{page.post_image}}" alt="{{page.title}}" />
                         {% endif %}
                     </div>
-                    <div class="entry-content blog-spacing">
+                    <div class="post-content blog-spacing">
                         {{page.content}}
                     </div>
                 </div>

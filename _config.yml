@@ -5,3 +5,4 @@ url: ""
 # Build settings
 theme: minima
 
+permalink: "/:title"
