@@ -1135,13 +1135,16 @@ Post
     
         img,
         video {
-            width:100%;
+            max-width:100%;
             object-fit: cover;
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         p { 
-            margin-top: 3rem;
-            margin-bottom: 1rem;
             text-align: justify;
         }
     }
