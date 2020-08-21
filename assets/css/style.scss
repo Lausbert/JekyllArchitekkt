@@ -1138,10 +1138,19 @@ Post
             max-width:100%;
             object-fit: cover;
             margin-top: 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 0.5rem;
             display: block;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        video + p em,
+        img + em {
+            @include font-size($small-font-size);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
         }
         
         p { 
