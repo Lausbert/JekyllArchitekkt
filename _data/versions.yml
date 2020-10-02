@@ -1,4 +1,7 @@
 ---
+- version: 0.6.1
+  features:
+  - added compatibility for Xcode 12
 - version: 0.6.0
   features:
   - modified trackpad/mouse navigation in graph window
