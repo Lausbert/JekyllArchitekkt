@@ -1,4 +1,14 @@
 ---
+- version: 0.7.0
+  features:
+  - added possibility to save and load a graph
+  - added progress view for graph building
+  - added progress view for graph updates
+  - added setting for arc width
+  - added setting for node radius
+  - added warning when an ast could not be parsed
+  - modified node name appearance
+  - removed setting for node radius based on childrens area
 - version: 0.6.1
   features:
   - added compatibility for Xcode 12
