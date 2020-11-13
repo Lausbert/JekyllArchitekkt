@@ -4,7 +4,7 @@
   - added support for apple silicon
 - version: 0.7.1
   features:
-  - modified regex field behaviour in visibiliy settings
+  - fixed regex field behaviour in visibiliy settings
 - version: 0.7.0
   features:
   - added possibility to save and load a graph
@@ -17,7 +17,7 @@
   - removed setting for node radius based on childrens area
 - version: 0.6.1
   features:
-  - added compatibility for Xcode 12
+  - fixed graph building for Xcode 12
 - version: 0.6.0
   features:
   - modified trackpad/mouse navigation in graph window
