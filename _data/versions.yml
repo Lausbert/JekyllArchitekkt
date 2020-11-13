@@ -1,4 +1,7 @@
 ---
+- version: 0.7.1
+  features:
+  - modified regex field behaviour in visibiliy settings
 - version: 0.7.0
   features:
   - added possibility to save and load a graph
