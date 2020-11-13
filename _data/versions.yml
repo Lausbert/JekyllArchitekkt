@@ -1,4 +1,7 @@
 ---
+- version: 0.8.0
+  features:
+  - added support for apple silicon
 - version: 0.7.1
   features:
   - modified regex field behaviour in visibiliy settings
