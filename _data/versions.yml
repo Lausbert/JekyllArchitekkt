@@ -1,4 +1,7 @@
 ---
+- version: 0.9.0
+  features:
+  - added undo/redo
 - version: 0.8.0
   features:
   - added support for apple silicon
