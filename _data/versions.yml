@@ -1,4 +1,8 @@
 ---
+- version: 0.10.1
+  features:
+  - fixed automoving of app to application folder and autochecking of updates at appst
+    start
 - version: 0.10.0
   features:
   - added sink radius setting
