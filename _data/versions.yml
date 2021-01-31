@@ -1,23 +1,29 @@
 ---
 - version: 0.10.1
+  date: 2021-11-29 00:00:00.000000000 +00:00
   features:
   - fixed automoving of app to application folder and autochecking of updates at appst
     start
 - version: 0.10.0
+  date: 2021-11-29 00:00:00.000000000 +00:00
   features:
   - added sink radius setting
   - added source radius setting
   - removed gravitational force on children setting
 - version: 0.9.0
+  date: 2021-11-15 00:00:00.000000000 +00:00
   features:
   - added undo/redo
 - version: 0.8.0
+  date: 2021-11-13 00:00:00.000000000 +00:00
   features:
   - added support for apple silicon
 - version: 0.7.1
+  date: 2021-11-13 00:00:00.000000000 +00:00
   features:
   - fixed regex field behaviour in visibiliy settings
 - version: 0.7.0
+  date: 2021-11-13 00:00:00.000000000 +00:00
   features:
   - added possibility to save and load a graph
   - added progress view for graph building
@@ -28,12 +34,15 @@
   - modified node name appearance
   - removed setting for node radius based on childrens area
 - version: 0.6.1
+  date: 2021-10-02 00:00:00.000000000 +00:00
   features:
   - fixed graph building for Xcode 12
 - version: 0.6.0
+  date: 2021-08-25 00:00:00.000000000 +00:00
   features:
   - modified trackpad/mouse navigation in graph window
 - version: 0.5.0
+  date: 2021-05-30 00:00:00.000000000 +00:00
   features:
   - added possibility to flatten a specific node or all nodes of specific scope
   - added possibility to hide a specific node or all nodes of specific scope
@@ -41,20 +50,25 @@
   - added visibility tab in right pane
   - modified force tab in right pane to simplify force settings
 - version: 0.4.1
+  date: 2021-05-01 00:00:00.000000000 +00:00
   features:
   - modified hint message to clarify xcode selection process
 - version: 0.4.0
+  date: 2020-04-26 00:00:00.000000000 +00:00
   features:
   - modified arc visualization to clarify dependency direction
 - version: 0.3.0
+  date: 2020-04-10 00:00:00.000000000 +00:00
   features:
   - added (automated) updating functionality
 - version: 0.2.0
+  date: 2020-04-10 00:00:00.000000000 +00:00
   features:
   - added automatic scheme detection for .xcworkspace files
   - added parsing and visualization of .xcworkspace files
   - removed target selection and visualising all targets within a scheme
 - version: 0.1.0
+  date: 2020-04-10 00:00:00.000000000 +00:00
   features:
   - added automatic scheme and target detection for .xcodeproj files
   - added parsing and visualization for single targets in .xcodeproj files
