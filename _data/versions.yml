@@ -2,8 +2,7 @@
 - version: 0.10.1
   date: 2021-11-29 00:00:00.000000000 +00:00
   features:
-  - fixed automoving of app to application folder and autochecking of updates at appst
-    start
+  - fixed automoving of app to application folder and autochecking of updates at app start
 - version: 0.10.0
   date: 2021-11-29 00:00:00.000000000 +00:00
   features:

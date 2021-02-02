@@ -4,5 +4,8 @@ url: ""
 
 # Build settings
 theme: minima
-
 permalink: "/:title"
+
+# Production variables
+cuttly_count: "https://cutt.ly/architekkt"
+cuttly_download_count: "https://cutt.ly/architekktlatest"

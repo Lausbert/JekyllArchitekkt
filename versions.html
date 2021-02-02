@@ -10,7 +10,14 @@ title: Versions
                     <div class="col-md-10">
                         <div class="card" data-aos="fade-up">
                             <div class="card-body">
-                                <h5 class="card-title font-weight-bold">{{version.version}}</h6>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h5 class="card-title font-weight-bold">{{version.version}}</h5>
+                                    </div>
+                                    <div class="col-sm-6 text-sm-right">
+                                        <h6 class="font-weight-light small">{{ version.date | date_to_long_string }}</h6>
+                                    </div>
+                                </div>
                                     <ul>
                                         {% for feature in version.features %}
                                             <li class="card-text font-weight-light small">{{feature}}</li>
