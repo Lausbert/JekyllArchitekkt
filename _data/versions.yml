@@ -1,8 +1,4 @@
 ---
-- version: 0.10.3
-  date: 2021-09-29 22:42:21.938732000 +02:00
-  features:
-  - fixed graph building for Xcode 13
 - version: 0.10.2
   date: 2021-09-27 23:20:24.376389000 +02:00
   features:
